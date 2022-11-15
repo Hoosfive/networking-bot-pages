@@ -17,22 +17,10 @@
 
 	<form id="profileForm" class="profile-form">
 		<h2 id="textProfile">Профиль</h2>
-		<div class="col-md-4 mb-3">
-			<input id="username" type="text" class="input" placeholder="Имя" maxlength="255" required>
-		</div>
-		<div class="col-md-4 mb-3">
-			<input id="city" type="text" class="input" placeholder="Город" minlength="3" maxlength="50" required>
-		</div>
-		<div class="col-md-4 mb-3">
-			<input id="position" type="text" class="input" placeholder="Должность" maxlength="255" required>
-		</div>
-		<div class="col-md-4 mb-3">
-			<input id="interests" type="text" class="input" placeholder="Интересы">
-		</div>
-		<div class="col-md-4 mb-4">
-			<textarea id="about" type="text" class="input about" rows="12" cols="50" placeholder="О себе"
-				maxlength="1000"></textarea>
-		</div>
+		<input id="userName" type="text" class="input" placeholder="Имя" maxlength="255" required>
+		<input id="city" type="text" class="input" placeholder="Город" minlength="3" maxlength="50" required>
+		<input id="position" type="text" class="input" placeholder="Должность" maxlength="255" required>
+		<textarea id="about" type="text" class="input about" placeholder="О себе" maxlength="1000"></textarea>
 		<button class="btn btn-primary btn-sm" type="submit">Проверить</button>
 	</form>
 

@@ -1,10 +1,9 @@
 const PROFILE_DATA_PARAM = 'data';
 
 let inputs = {
-	username: document.querySelector('#username'),
+	userName: document.querySelector('#userName'),
 	city: document.querySelector('#city'),
 	position: document.querySelector('#position'),
-	interests: document.querySelector('#interests'),
 	about: document.querySelector('#about'),
 }
 
@@ -17,10 +16,9 @@ function showMainButton(event) {
 
 function sendProfile() {
 	let profile = {
-		username: inputs.username.value,
+		userName: inputs.userName.value,
 		city: inputs.city.value,
 		position: inputs.position.value,
-		interests: inputs.interests.value,
 		about: inputs.about.value
 	}
 	Telegram.WebApp.sendData(JSON.stringify(profile))
