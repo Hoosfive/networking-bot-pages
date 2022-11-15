@@ -1,3 +1,5 @@
+const PROFILE_DATA_PARAM = 'data';
+
 let inputs = {
 	username: document.querySelector('#username'),
 	city: document.querySelector('#city'),
@@ -24,18 +26,20 @@ function sendProfile() {
 	Telegram.WebApp.sendData(JSON.stringify(profile))
 }
 
-function setUrlParamsToInputsValues () {
+function setUrlParamJsonToInputsValues() {
 	let urlParams = new URLSearchParams(document.location.search);
-
-	for (option in inputs){
-		if (urlParams.has(option)){
-			inputs[option].value = urlParams.get(option);
+	if (urlParams.has(PROFILE_DATA_PARAM)) {
+		let profile = JSON.parse(urlParams.get(PROFILE_DATA_PARAM));
+		for (param in profile) {
+			if (param != null) {
+				inputs[param].value = profile[param];
+			}
 		}
 	}
 }
 
 function init() {
-	setUrlParamsToInputsValues()
+	setUrlParamJsonToInputsValues()
 	Telegram.WebApp.ready()
 	Telegram.WebApp.MainButton
 		.setText('Сохранить')
