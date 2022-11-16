@@ -39,7 +39,7 @@ function setProfileParamValuesToFields(urlParams) {
 		if (param != null) {
 			if (param !== 'cityName') {
 				profileFormElements[param].value = profile[param]
-			} else {
+			} else if (profile[param] !== '') {
 				profileFormElements[param].innerText = profile[param]
 			}
 		}
