@@ -36,7 +36,7 @@ function processUrlParams() {
 function setProfileParamValuesToFields(urlParams) {
 	let profile = JSON.parse(urlParams.get(PROFILE_DATA_URL_PARAM))
 	for (param in profile) {
-		if (param != null) {
+		if (param != null && profile[param] != null) {
 			if (param !== 'cityName') {
 				profileFormElements[param].value = profile[param]
 			} else if (profile[param] !== '') {
