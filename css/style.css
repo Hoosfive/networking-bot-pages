@@ -24,8 +24,7 @@ body {
 	flex-direction: column;
 	align-items: center;
 
-	padding-top: 10vh;
-
+	padding-top: 5vh;
 }
 
 .input {
@@ -43,9 +42,20 @@ body {
 	outline: none;
 }
 
-.about {
+.btn.city {
+	width: 50vw;
+	border: 2px solid black;
+}
+
+.btn.city:hover {
+	width: 50vw;
+	border: 2px solid black;
+}
+
+.input.about {
 	height: 200px;
 	width: 70vw;
+	margin-top: 3vh;
 	margin-bottom: 4vh;
 	color: var(--tg-theme-hint-color, #222222)
 }
